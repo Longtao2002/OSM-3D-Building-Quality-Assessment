@@ -9,6 +9,22 @@ Implementation of a framework that combines **comparative metrics** and **machin
 At this stage, this repository mainly provides the **interactive result visualisations** (three HTML maps for the study areas).  
 If you are interested in the **full source code and processing pipeline**, please feel free to contact the author — the code can be shared upon reasonable request.
 
+
+> [!IMPORTANT]
+> **Update: High-Precision Dutch Datasets & Lightweighting Strategy**
+> 
+> We have added a new directory (e.g., `New_results_html/`) containing updated evaluations, which now include the newly added Dutch regions (such as Almere and Amsterdam). 
+> 
+> Due to the massive number of matched buildings in these high-precision datasets, rendering all building geometries in a single interactive HTML file exceeds typical browser limits and causes loading failures. To ensure smooth performance, we have implemented a **lightweighting strategy** for these new files: the maps now **only render the top 20% worst-performing buildings** (i.e., those with the highest errors).
+> 
+> *Note: Although the individual building polygons are filtered to show only the worst 20% cases, the background Grid Heatmap layers are still calculated using **100% of the dataset** to accurately reflect the global error distribution.*
+
+
+
+
+
+
+
 ---
 
 ## 1. Repository contents
@@ -27,19 +43,6 @@ These maps allow you to:
 - compare OSM buildings against authoritative reference data
 - inspect spatial patterns of errors via grid-based heat maps
 - obtain per-building diagnostic summaries (via tooltips, popups, and an LLM-based helper)
-
-
-<div style="color:red;">
-
-### ⚠️ Update: High-Precision Dutch Datasets & Lightweighting Strategy
-
-We have added a new directory (e.g., `New_results_html/`) containing updated evaluations, which now include the newly added Dutch regions (such as Almere and Amsterdam). 
-
-Due to the massive number of matched buildings in these high-precision datasets, rendering all building geometries in a single interactive HTML file exceeds typical browser limits and causes loading failures. To ensure smooth performance, we have implemented a **lightweighting strategy** for these new files: the maps now **only render the top 20% worst-performing buildings** (i.e., those with the highest errors).
-
-*Note: Although the individual building polygons are filtered to show only the worst 20% cases, the background Grid Heatmap layers are still calculated using **100% of the dataset** to accurately reflect the global error distribution.*
-
-</div>
 
 
 ---
