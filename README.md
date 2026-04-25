@@ -29,25 +29,6 @@ These maps allow you to:
 - obtain per-building diagnostic summaries (via tooltips, popups, and an LLM-based helper)
 
 
-## 1. Repository contents
-
-The directory `results_html/` contains three ZIP archives. After unzipping, you will obtain three standalone HTML files (the core result visualisations):
-
-- `miyun_eval_multi_metrics.html`
-- `ningbo_eval_multi_metrics.html`
-- `xicheng_eval_multi_metrics.html`
-
-Each HTML file is a **standalone interactive map** and can be opened directly in a modern web browser (e.g., Chrome, Firefox, Edge).
-
-These maps allow you to:
-
-- explore per-building error metrics (e.g., height difference, footprint discrepancy, 3D Hausdorff distance)
-- compare OSM buildings against authoritative reference data
-- inspect spatial patterns of errors via grid-based heat maps
-- obtain per-building diagnostic summaries (via tooltips, popups, and an LLM-based helper)
-
----
-
 <div style="color:red;">
 
 ### ⚠️ Update: High-Precision Dutch Datasets & Lightweighting Strategy
@@ -59,6 +40,7 @@ Due to the massive number of matched buildings in these high-precision datasets,
 *Note: Although the individual building polygons are filtered to show only the worst 20% cases, the background Grid Heatmap layers are still calculated using **100% of the dataset** to accurately reflect the global error distribution.*
 
 </div>
+
 
 ---
 
